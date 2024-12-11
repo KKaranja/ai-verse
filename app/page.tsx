@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-import Image from "next/image";
-import { FaPencilAlt } from "react-icons/fa";
-import { AiFillRobot } from "react-icons/ai";
+import Image from 'next/image';
+import { FaPencilAlt } from 'react-icons/fa';
+import { AiFillRobot } from 'react-icons/ai';
 
-import { Search, Tag, ClipboardList } from "lucide-react";
-import { useAuth } from "@clerk/nextjs";
-import { FaCog, FaChartBar, FaLock } from "react-icons/fa";
-import { IoCheckmarkCircle, IoClose } from "react-icons/io5";
+import { Search, Tag, ClipboardList } from 'lucide-react';
+import { useAuth } from '@clerk/nextjs';
+import { FaCog, FaChartBar, FaLock } from 'react-icons/fa';
+import { IoCheckmarkCircle, IoClose } from 'react-icons/io5';
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <CTASection />
       <div className="w-full flex justify-center items-center mt-10">
         <Image
-          src={"/ai-verse-dashboard.png"}
+          src={'/ai-verse-dashboard.png'}
           alt="dashboard"
           width={900}
           height={400}
@@ -118,13 +118,15 @@ function CTASection() {
         everything you need to elevate your content strategy. Get started and
         see the difference!
       </p>
-      <button
-        className="block px-9 py-3 text-sm font-medium text-white bg-purple-600
+      <Link href="/sign-in">
+        <button
+          className="block px-9 py-3 text-sm font-medium text-white bg-purple-600
         transition focus:outline-none rounded-lg hover:bg-primary-dark"
-        type="button"
-      >
-        {`Start Creating Now!`}
-      </button>
+          type="button"
+        >
+          {`Start Creating Now!`}
+        </button>
+      </Link>
     </div>
   );
 }
@@ -132,21 +134,21 @@ function CTASection() {
 function KeyFeatures() {
   const features = [
     {
-      title: "Customized Content Generation",
+      title: 'Customized Content Generation',
       description:
-        "Create tailored content easily with our customizable templates and options, including dropdowns and validation to ensure high-quality results.",
+        'Create tailored content easily with our customizable templates and options, including dropdowns and validation to ensure high-quality results.',
       icon: <FaCog size={24} />,
     },
     {
-      title: "Real-Time Analytics Dashboard",
+      title: 'Real-Time Analytics Dashboard',
       description:
-        "Track your content generation with a comprehensive dashboard displaying real-time statistics, visual charts, and a recent history section in a responsive layout.",
+        'Track your content generation with a comprehensive dashboard displaying real-time statistics, visual charts, and a recent history section in a responsive layout.',
       icon: <FaChartBar size={24} />,
     },
     {
-      title: "Flexible Subscription and Usage Tracking",
+      title: 'Flexible Subscription and Usage Tracking',
       description:
-        "Enjoy a free plan with word count tracking and upgrade to pro for unlimited content generation. Restrictions on the free plan encourage flexibility and choice.",
+        'Enjoy a free plan with word count tracking and upgrade to pro for unlimited content generation. Restrictions on the free plan encourage flexibility and choice.',
       icon: <FaLock size={24} />,
     },
   ];
@@ -189,11 +191,11 @@ function PricingSection() {
           title="Free Plan"
           price="$0"
           features={[
-            "Access to 5 Templates",
-            "Generate up to 1,000 words per month",
-            "Basic Customer Support",
-            "Standard Content Tone",
-            "Limited Word Count Tracking",
+            'Access to 5 Templates',
+            'Generate up to 1,000 words per month',
+            'Basic Customer Support',
+            'Standard Content Tone',
+            'Limited Word Count Tracking',
           ]}
           buttonLabel="Get Started for Free"
           isPro={false}
@@ -202,11 +204,11 @@ function PricingSection() {
           title="Pro Plan"
           price="$9,99"
           features={[
-            "Unlimited Access to All 14 Templates",
-            "Generate up to 100,000 words per month.",
-            "Priority Customer Support",
-            "Custom Content Tone",
-            "Priority Customer Support",
+            'Unlimited Access to All 14 Templates',
+            'Generate up to 100,000 words per month.',
+            'Priority Customer Support',
+            'Custom Content Tone',
+            'Priority Customer Support',
           ]}
           buttonLabel="Get Started"
           isPro={true}
@@ -228,7 +230,7 @@ interface PlanProps {
 function PlanCard({ title, price, features, buttonLabel, isPro }: PlanProps) {
   return (
     <div
-      className={` rounded-lg shadow-lg 
+      className={` rounded-lg shadow-lg
         px-10 flex flex-col gap-3 relative  mt-6  pt-6 pb-10   w-[30%] max-sm:w-full`}
     >
       {/* plan and price */}
@@ -251,7 +253,7 @@ function PlanCard({ title, price, features, buttonLabel, isPro }: PlanProps) {
       {isPro && (
         <button
           className={`w-full py-2 px-4 rounded text-white ${
-            isPro ? "bg-purple-600" : "bg-gray-500"
+            isPro ? 'bg-purple-600' : 'bg-gray-500'
           } hover:opacity-90 transition duration-300`}
         >
           {buttonLabel}
