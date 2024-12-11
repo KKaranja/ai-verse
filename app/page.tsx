@@ -118,7 +118,7 @@ function CTASection() {
         everything you need to elevate your content strategy. Get started and
         see the difference!
       </p>
-      <Link href="/sign-in">
+      <Link href="/sign-up">
         <button
           className="block px-9 py-3 text-sm font-medium text-white bg-purple-600
         transition focus:outline-none rounded-lg hover:bg-primary-dark"
